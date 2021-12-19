@@ -1,0 +1,5 @@
+====================
+zopyx.usersascontent
+====================
+
+User documentation
