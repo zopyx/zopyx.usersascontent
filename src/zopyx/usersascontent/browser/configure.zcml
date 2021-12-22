@@ -16,13 +16,22 @@
     permission="zope2.View"
     />
 
-<browser:page
+  <browser:page
+    name="references"
+    for="*"
+    layer="zopyx.usersascontent.interfaces.IZopyxUsersascontentLayer"
+    class=".dashboard.Dashboard"
+    attribute="references"
+    permission="zope2.View"
+    />
+
+  <browser:page
     name="usersascontent-settings"
     for="Products.CMFPlone.interfaces.IPloneSiteRoot"
     class=".controlpanel.UsersAsContentControlPanel"
     permission="cmf.ManagePortal"
     layer="zopyx.usersascontent.interfaces.IZopyxUsersascontentLayer"
-/>
+  />
 
   <browser:jbot
       directory="overrides"

@@ -5,6 +5,8 @@ from plone import api
 from zope.interface.interfaces import ComponentLookupError
 
 from zopyx.usersascontent.interfaces import IUsersAsContentSettings
+from collective.relationhelpers import api as relapi
+
 
 
 
@@ -33,3 +35,10 @@ class Dashboard(BrowserView):
         else:
             api.portal.show_message("No user object found for you ", self.request)
             self.request.response.redirect(portal.absolute_url())
+
+    def references(self):
+
+        return dict(
+                forward_relations=relapi.relations(self.context, as_dict=True),
+                backkward_relations=relapi.backrelations(self.context, as_dict=True),
+                )
