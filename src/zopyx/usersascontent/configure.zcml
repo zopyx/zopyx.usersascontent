@@ -17,6 +17,13 @@
 
   <include file="permissions.zcml" />
 
+
+  <adapter
+    factory=".adapters.RedirectAfterLoginAdapter"
+    for="OFS.interfaces.ITraversable
+         zope.publisher.interfaces.IRequest"
+    />
+
   <genericsetup:registerProfile
       name="default"
       title="zopyx.usersascontent"
