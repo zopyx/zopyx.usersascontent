@@ -26,6 +26,15 @@
     />
 
   <browser:page
+    name="ploneuser-search"
+    for="*"
+    layer="zopyx.usersascontent.interfaces.IZopyxUsersascontentLayer"
+    class=".user_search.UserSearch"
+    template="user_search.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
     name="usersascontent-settings"
     for="Products.CMFPlone.interfaces.IPloneSiteRoot"
     class=".controlpanel.UsersAsContentControlPanel"

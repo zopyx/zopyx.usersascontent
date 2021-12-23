@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-12-23 12:51+0000\n"
+"POT-Creation-Date: 2021-12-23 14:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,10 +22,12 @@ msgid ""
 msgstr ""
 
 #: ../browser/view.pt:55
+#: ../browser/view2.pt:55
 msgid "Backward references"
 msgstr ""
 
 #: ../browser/view.pt:10
+#: ../browser/view2.pt:10
 msgid "E-Mail"
 msgstr ""
 
@@ -38,6 +40,7 @@ msgid "First login"
 msgstr ""
 
 #: ../browser/view.pt:41
+#: ../browser/view2.pt:41
 msgid "Forward references"
 msgstr ""
 
@@ -49,7 +52,7 @@ msgstr ""
 msgid "Information about yourself"
 msgstr ""
 
-#: ../configure.zcml:34
+#: ../configure.zcml:36
 msgid "Installs the zopyx.usersascontent add-on."
 msgstr ""
 
@@ -66,16 +69,35 @@ msgid "My Dashboard"
 msgstr ""
 
 #: ../browser/view.pt:32
+#: ../browser/view2.pt:32
 msgid "My content"
 msgstr ""
 
+#: ../browser/user_search.pt:21
+msgid "No hits"
+msgstr ""
+
 #: ../browser/view.pt:14
+#: ../browser/view2.pt:14
 #: ../content/plone_user.py:28
 msgid "Organization"
 msgstr ""
 
+#: ../browser/user_search.pt:8
+msgid "Person search"
+msgstr ""
+
 #: ../browser/view.pt:22
+#: ../browser/view2.pt:22
 msgid "Personal information"
+msgstr ""
+
+#: ../browser/user_search.pt:15
+msgid "Persons found"
+msgstr ""
+
+#: ../browser/user_search.pt:9
+msgid "Peter Becker"
 msgstr ""
 
 #: ../profiles/default/types/PloneUser.xml
@@ -98,11 +120,16 @@ msgstr ""
 msgid "Redirect to user object always after login"
 msgstr ""
 
+#: ../browser/user_search.pt:10
+msgid "Search"
+msgstr ""
+
 #: ../browser/view.pt:18
+#: ../browser/view2.pt:18
 msgid "URL"
 msgstr ""
 
-#: ../configure.zcml:43
+#: ../configure.zcml:45
 msgid "Uninstalls the zopyx.usersascontent add-on."
 msgstr ""
 
@@ -122,10 +149,10 @@ msgstr ""
 msgid "Your picture"
 msgstr ""
 
-#: ../configure.zcml:34
+#: ../configure.zcml:36
 msgid "zopyx.usersascontent"
 msgstr ""
 
-#: ../configure.zcml:43
+#: ../configure.zcml:45
 msgid "zopyx.usersascontent (uninstall)"
 msgstr ""

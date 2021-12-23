@@ -15,10 +15,12 @@ msgstr ""
 "Domain: DOMAIN\n"
 
 #: ../browser/view.pt:55
+#: ../browser/view2.pt:55
 msgid "Backward references"
 msgstr "Rückreferenzen"
 
 #: ../browser/view.pt:10
+#: ../browser/view2.pt:10
 msgid "E-Mail"
 msgstr "E-Mail"
 
@@ -31,6 +33,7 @@ msgid "First login"
 msgstr "Erster Login"
 
 #: ../browser/view.pt:41
+#: ../browser/view2.pt:41
 msgid "Forward references"
 msgstr "Vorwärtsreferenzen"
 
@@ -42,7 +45,7 @@ msgstr "ID des Benutzerordners"
 msgid "Information about yourself"
 msgstr "Persönliche Informationen"
 
-#: ../configure.zcml:34
+#: ../configure.zcml:36
 msgid "Installs the zopyx.usersascontent add-on."
 msgstr ""
 
@@ -59,17 +62,36 @@ msgid "My Dashboard"
 msgstr "Meine Profilseite"
 
 #: ../browser/view.pt:32
+#: ../browser/view2.pt:32
 msgid "My content"
 msgstr "Meine Inhalte"
 
+#: ../browser/user_search.pt:21
+msgid "No hits"
+msgstr ""
+
 #: ../browser/view.pt:14
+#: ../browser/view2.pt:14
 #: ../content/plone_user.py:28
 msgid "Organization"
 msgstr "Organisation"
 
+#: ../browser/user_search.pt:8
+msgid "Person search"
+msgstr ""
+
 #: ../browser/view.pt:22
+#: ../browser/view2.pt:22
 msgid "Personal information"
 msgstr "Persönliche Information"
+
+#: ../browser/user_search.pt:15
+msgid "Persons found"
+msgstr ""
+
+#: ../browser/user_search.pt:9
+msgid "Peter Becker"
+msgstr ""
 
 #: ../profiles/default/types/PloneUser.xml
 msgid "Plone user as content"
@@ -91,11 +113,16 @@ msgstr "Weiterleitung auf Benutzerobject nach Registrierung"
 msgid "Redirect to user object always after login"
 msgstr "Immer nach dem Login auf Benutzerobjekt weiterleiten"
 
+#: ../browser/user_search.pt:10
+msgid "Search"
+msgstr ""
+
 #: ../browser/view.pt:18
+#: ../browser/view2.pt:18
 msgid "URL"
 msgstr "URL"
 
-#: ../configure.zcml:43
+#: ../configure.zcml:45
 msgid "Uninstalls the zopyx.usersascontent add-on."
 msgstr ""
 
@@ -115,10 +142,23 @@ msgstr "Voller Name"
 msgid "Your picture"
 msgstr "Ihr Bild"
 
-#: ../configure.zcml:34
+#: ../configure.zcml:36
 msgid "zopyx.usersascontent"
 msgstr ""
 
-#: ../configure.zcml:43
+#: ../configure.zcml:45
 msgid "zopyx.usersascontent (uninstall)"
 msgstr ""
+
+msgid "Person search"
+msgstr "Personensuche"
+
+msgid "Persons found"
+msgstr "Gefundene Personen"
+
+
+msgid "Search"
+msgstr "Suchen"
+
+msgid "No persons found"
+msgstr "Keine Treffer"

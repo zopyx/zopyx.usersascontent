@@ -11,5 +11,5 @@ def SearchableText(obj):
             h2t.handle(obj.text.output), 
             obj.fullname, 
             obj.organization, ]
-    items = filter(None, items)
+    items = [item for item in items if item]
     return ' '.join(items)

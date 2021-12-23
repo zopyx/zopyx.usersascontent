@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal" xmlns:i18n="http://xml.zope.org/namespaces/i18n" lang="en"
+    metal:use-macro="here/main_template/macros/master" i18n:domain="zopyx.usersascontent">
+    <body>
+        <div metal:fill-slot="content-core">
+
+            <form method="post" action="${context/absolute_url}/ploneuser-search">
+                <legend i18n:translate="">Person search</legend>
+                <input type="text" name="query" tal:attributes="value request/query | nothing" placeholder="Peter Becker" i18n:attributes="placeholder"/>
+                <input type="submit" value="Search" i18n:attributes="value"/>
+            </form>
+
+            <div id="search-results" tal:condition="request/query | nothing">
+                <tal:def tal:define="items view/search_user">
+                    <span tal:condition="items" i18n:translate="">Persons found</span>
+                    <ul tal:condition="items">
+                        <li tal:repeat="item items">
+                            <a href="${item/getURL}">${item/Title} </a>
+                        </li>
+                   </ul>
+                   <span tal:condition="not: items" i18n:translate="">No persons found</span>
+               </tal:def>
+            </div>
+        </div>
+    </body>
+</html>
+

@@ -55,6 +55,7 @@ setup(
         'plone.restapi ',
         'plone.app.dexterity',
         'plone.schema',
+        'html2text',
         'collective.relationhelpers',
     ],
     extras_require={

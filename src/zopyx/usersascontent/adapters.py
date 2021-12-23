@@ -27,6 +27,7 @@ class RedirectAfterLoginAdapter(object):
                 uf = api.content.create(
                     type="Folder", id=user_folder_id, title="Users", container=portal
                 )
+                uf.setLayout("ploneuser-search")
                 api.content.transition(uf, "publish")
             uf = portal[user_folder_id]
 
