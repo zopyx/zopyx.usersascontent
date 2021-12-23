@@ -8,20 +8,20 @@
   <include package="z3c.jbot" file="meta.zcml" />
 
   <browser:page
+    name="view"
+    for="zopyx.usersascontent.content.plone_user.IPloneUser"
+    layer="zopyx.usersascontent.interfaces.IZopyxUsersascontentLayer"
+    class=".dashboard.Dashboard"
+    template="view.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
     name="goto-my-dashboard"
     for="*"
     layer="zopyx.usersascontent.interfaces.IZopyxUsersascontentLayer"
     class=".dashboard.Dashboard"
     attribute="goto_my_dashboard"
-    permission="zope2.View"
-    />
-
-  <browser:page
-    name="references"
-    for="*"
-    layer="zopyx.usersascontent.interfaces.IZopyxUsersascontentLayer"
-    class=".dashboard.Dashboard"
-    attribute="references"
     permission="zope2.View"
     />
 

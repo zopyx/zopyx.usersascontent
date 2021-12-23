@@ -36,9 +36,14 @@ class Dashboard(BrowserView):
             api.portal.show_message("No user object found for you ", self.request)
             self.request.response.redirect(portal.absolute_url())
 
-    def references(self):
+    def my_content(self):
 
-        return dict(
-                forward_relations=relapi.relations(self.context, as_dict=True),
-                backkward_relations=relapi.backrelations(self.context, as_dict=True),
-                )
+        catalog = api.portal.get_tool("portal_catalog")
+
+        return catalog(Creator=api.user.get_current().getId())
+
+    def my_forward_references(self):
+        return relapi.relations(self.context, as_dict=True)
+
+    def my_backward_references(self):
+        return relapi.backrelations(self.context, as_dict=True)
