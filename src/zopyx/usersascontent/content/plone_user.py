@@ -51,11 +51,11 @@ class IPloneUser(model.Schema):
         required=False,
     )
 
-    evil_mastermind = RelationChoice(
-        title="The Evil Mastermind",
-        vocabulary="plone.app.vocabularies.Catalog",
-        required=False,
-    )
+#    evil_mastermind = RelationChoice(
+#        title="The Evil Mastermind",
+#        vocabulary="plone.app.vocabularies.Catalog",
+#        required=False,
+#    )
 
 
 @implementer(IPloneUser)
