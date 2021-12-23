@@ -37,9 +37,7 @@ class Dashboard(BrowserView):
             self.request.response.redirect(portal.absolute_url())
 
     def my_content(self):
-
         catalog = api.portal.get_tool("portal_catalog")
-
         return catalog(Creator=api.user.get_current().getId())
 
     def my_forward_references(self):
