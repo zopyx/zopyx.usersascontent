@@ -6,26 +6,26 @@
             <h1 class="documentFirstHeading">${context/fullname}</h1>
 
             <div id="my-metadata">
-                <p tal:condition="context/email">
+                <div tal:condition="context/email">
                     <span class="label" i18n:translate="">E-Mail</span>:
                     <a href="mailto:${context/email}">${context/email}</a>
-                </p>
-                <p tal:condition="context/organization">
+                </div>
+                <div tal:condition="context/organization">
                     <span class="label" i18n:translate="">Organization</span>:
                     <a href="mailto:${context/organization}">${context/organization}</a>
-                </p>
-                <p tal:condition="context/url">
+                </div>
+                <div tal:condition="context/url">
                     <span class="label" i18n:translate="">URL</span>:
                     <a href="${context/url}">${context/url}</a>
-                </p>
-                <p tal:condition="context/text">
+                </div>
+                <div tal:condition="context/text">
                     <span class="label" i18n:translate="">Personal information</span>:
-                    <div tal:content="structure context/text/output"/>
-                </p>
-                <p tal:condition="python: context.picture">
+                    <div i18n:translate="" tal:content="structure context/text/output"></div>
+                </div>
+                <div tal:condition="python: context.picture">
                     <img class="" 
                         tal:attributes="src string:${context/absolute_url}/@@images/picture/large" alt="Portrait: ${context/fullname}" />
-                </p>
+                </div>
             </div>
 
             <tal:def define="items view/my_content">
