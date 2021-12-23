@@ -101,11 +101,11 @@ msgstr ""
 
 #: ../profiles/default/controlpanel.xml
 msgid "Users as Content"
-msgstr ""
+msgstr "Benutzer als Inhalte"
 
 #: ../browser/controlpanel.py:20
 msgid "Users as Content settings"
-msgstr "Benutzer-als-Content"
+msgstr "Benutzer als Inhalte"
 
 #: ../content/plone_user.py:24
 msgid "Your fullname"
