@@ -61,3 +61,8 @@ class IPloneUser(model.Schema):
 @implementer(IPloneUser)
 class PloneUser(Item):
     """Content-type class for IPloneUser"""
+
+
+    def Title(self):
+        """ Take title from fullname """
+        return self.fullname

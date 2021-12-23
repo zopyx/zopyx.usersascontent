@@ -24,6 +24,8 @@
          zope.publisher.interfaces.IRequest"
     />
 
+  <adapter factory=".indexers.SearchableText" name="SearchableText" />
+
   <genericsetup:registerProfile
       name="default"
       title="zopyx.usersascontent"
