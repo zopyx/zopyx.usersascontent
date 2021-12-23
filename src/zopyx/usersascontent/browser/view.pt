@@ -52,30 +52,52 @@
 
             <tal:def define="items view/my_forward_references">
                 <h2 i18n:translate="" tal:condition="items">Forward references</h2>
-                <ul id="my-forward-references" tal:condition="items">
-                    <li tal:repeat="relationship items">
-                        <h3>${relationship}</h3>
-                        <ul>
-                            <li tal:repeat="item items/?relationship">
-                                <a href="${item/absolute_url}">${item/Title}</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                <tal:loop tal:repeat="relationship items">
+                    <table class="table table-light listing" tal:condition="items/?relationship">
+                        <caption>${relationship}</caption>
+                        <thead>
+                            <tr>
+                                <th i18n:translate="">Title</th>
+                                <th i18n:translate="">Path</th>
+                                <th i18n:translate="">Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr tal:repeat="item items/?relationship">
+                                <td>
+                                    <a href="${item/absolute_url}">${item/Title}</a>
+                                </td>
+                                <td>${python: item.absolute_url(1)}</td>
+                                <td i18n:translate="">${item/portal_type}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </tal:loop>
             </tal:def>
 
             <tal:def define="items view/my_backward_references">
                 <h2 i18n:translate="" tal:condition="items">Backward references</h2>
-                <ul id="my-backward-references" tal:condition="items">
-                    <li tal:repeat="relationship items">
-                        <h3>${relationship}</h3>
-                        <ul>
-                            <li tal:repeat="item items/?relationship">
-                                <a href="${item/absolute_url}">${item/Title}</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                <tal:loop tal:repeat="relationship items">
+                    <table class="table table-light listing" tal:condition="items/?relationship">
+                        <caption>${relationship}</caption>
+                        <thead>
+                            <tr>
+                                <th i18n:translate="">Title</th>
+                                <th i18n:translate="">Path</th>
+                                <th i18n:translate="">Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr tal:repeat="item items/?relationship">
+                                <td>
+                                    <a href="${item/absolute_url}">${item/Title}</a>
+                                </td>
+                                <td>${python: item.absolute_url(1)}</td>
+                                <td i18n:translate="">${item/portal_type}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </tal:loop>
             </tal:def>
         </div>
     </body>
