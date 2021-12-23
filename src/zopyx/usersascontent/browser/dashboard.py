@@ -8,19 +8,19 @@ from zopyx.usersascontent.interfaces import IUsersAsContentSettings
 from collective.relationhelpers import api as relapi
 
 
-
-
 class Dashboard(BrowserView):
-    """ Dashboard browser view """
+    """Dashboard browser view"""
 
     def goto_my_dashboard(self):
-        """ Redirect to PloneUser object of currently logged in user """
+        """Redirect to PloneUser object of currently logged in user"""
 
         user = api.user.get_current()
         user_id = user.getId()
         portal = api.portal.get()
 
-        user_folder_id = api.portal.get_registry_record("user_folder_id", IUsersAsContentSettings)
+        user_folder_id = api.portal.get_registry_record(
+            "user_folder_id", IUsersAsContentSettings
+        )
         if user_folder_id not in portal.objectIds():
             api.portal.show_message("No user object found for you ", self.request)
             self.request.response.redirect(portal.absolute_url())

@@ -21,13 +21,15 @@ class ZopyxUsersascontentLayer(PloneSandboxLayer):
         # The z3c.autoinclude feature is disabled in the Plone fixture base
         # layer.
         import plone.app.dexterity
+
         self.loadZCML(package=plone.app.dexterity)
         import plone.restapi
+
         self.loadZCML(package=plone.restapi)
         self.loadZCML(package=zopyx.usersascontent)
 
     def setUpPloneSite(self, portal):
-        applyProfile(portal, 'zopyx.usersascontent:default')
+        applyProfile(portal, "zopyx.usersascontent:default")
 
 
 ZOPYX_USERSASCONTENT_FIXTURE = ZopyxUsersascontentLayer()
@@ -35,13 +37,13 @@ ZOPYX_USERSASCONTENT_FIXTURE = ZopyxUsersascontentLayer()
 
 ZOPYX_USERSASCONTENT_INTEGRATION_TESTING = IntegrationTesting(
     bases=(ZOPYX_USERSASCONTENT_FIXTURE,),
-    name='ZopyxUsersascontentLayer:IntegrationTesting',
+    name="ZopyxUsersascontentLayer:IntegrationTesting",
 )
 
 
 ZOPYX_USERSASCONTENT_FUNCTIONAL_TESTING = FunctionalTesting(
     bases=(ZOPYX_USERSASCONTENT_FIXTURE,),
-    name='ZopyxUsersascontentLayer:FunctionalTesting',
+    name="ZopyxUsersascontentLayer:FunctionalTesting",
 )
 
 
@@ -51,5 +53,5 @@ ZOPYX_USERSASCONTENT_ACCEPTANCE_TESTING = FunctionalTesting(
         REMOTE_LIBRARY_BUNDLE_FIXTURE,
         z2.ZSERVER_FIXTURE,
     ),
-    name='ZopyxUsersascontentLayer:AcceptanceTesting',
+    name="ZopyxUsersascontentLayer:AcceptanceTesting",
 )

@@ -17,8 +17,8 @@ from zope.component import getUtility
 class UsersAsContentEditForm(controlpanel.RegistryEditForm):
 
     schema = IUsersAsContentSettings
-    label = _(u'Users as Content settings')
-    description = _(u'')
+    label = _(u"Users as Content settings")
+    description = _(u"")
 
     def updateFields(self):
         super(UsersAsContentEditForm, self).updateFields()
@@ -32,7 +32,7 @@ class UsersAsContentControlPanel(controlpanel.ControlPanelFormWrapper):
 
     @property
     def settings(self):
-        """ Returns setting as dict """
+        """Returns setting as dict"""
         registry = getUtility(IRegistry)
         settings = registry.forInterface(IUsersAsContentSettings)
         result = dict()
@@ -41,5 +41,5 @@ class UsersAsContentControlPanel(controlpanel.ControlPanelFormWrapper):
         return result
 
     def settings_json(self):
-        """ Returns setting as JSON """
+        """Returns setting as JSON"""
         return json.dumps(self.settings)
