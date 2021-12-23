@@ -8,8 +8,9 @@ from .content.plone_user import IPloneUser
 def SearchableText(obj):
     h2t = html2text.HTML2Text()
     items = [
-            h2t.handle(obj.text.output), 
             obj.fullname, 
             obj.organization, ]
+    if obj.text.output:
+        items.append(h2t.handle(obj.text.output)) 
     items = [item for item in items if item]
     return ' '.join(items)
