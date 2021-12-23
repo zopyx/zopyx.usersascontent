@@ -1,4 +1,5 @@
 from plone import api
+from datetime import datetime
 from Products.CMFPlone.interfaces import IRedirectAfterLogin
 from Products.CMFPlone.utils import safe_unicode
 from zope.interface import implementer
@@ -36,6 +37,21 @@ class RedirectAfterLoginAdapter(object):
 
 
     def __call__(self, came_from=None, is_initial_login=False):
+
         user_obj = self.create_and_get_user_folder()
-        return user_obj.absolute_url()
+
+        # update login dates
+        if not user_obj.first_login:
+            user_obj.first_login = datetime.utcnow()
+        user_obj.last_login = datetime.utcnow()
+
+        redirect_always = api.portal.get_registry_record("redirect_always", IUsersAsContentSettings)
+        if redirect_always:
+            return user_obj.absolute_url()
+
+        came_from = self.request.get('came_from')
+        if came_from:
+            return came_from
+
+        return self.context.absolute_url()
 
