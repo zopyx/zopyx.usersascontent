@@ -38,7 +38,7 @@ class RedirectAfterLoginAdapter(object):
                     type="PloneUser", id=user_id, title=user_id, container=uf
                 )
 
-        return portal[user_folder_id][user_id]
+        return portal[user_folder_id][user_id]   
 
     def __call__(self, came_from=None, is_initial_login=False):
 
@@ -48,7 +48,12 @@ class RedirectAfterLoginAdapter(object):
         if not user_obj.first_login:
             user_obj.first_login = datetime.utcnow()
             user_obj.last_login = datetime.utcnow()
-            return user_obj.absolute_url()
+
+            redirect_after_registration= api.portal.get_registry_record(
+                "redirect_after_registration", IUsersAsContentSettings
+            )
+            if redirect_after_registration:
+                return user_obj.absolute_url() 
 
         # update login dates
         user_obj.last_login = datetime.utcnow()
