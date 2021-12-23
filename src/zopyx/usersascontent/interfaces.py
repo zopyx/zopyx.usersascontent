@@ -15,10 +15,10 @@ class IZopyxUsersascontentLayer(IDefaultBrowserLayer):
 class IUsersAsContentSettings(Interface):
     """ Connector settings """
 
-    enabled = schema.Bool(title=_('Users as Content enabled'),
-                          description=None,
-                          default=True,
-                          required=False)
+#    enabled = schema.Bool(title=_('Users as Content enabled'),
+#                          description=None,
+#                          default=True,
+#                          required=False)
 
     user_folder_id = schema.TextLine(title=_('ID of user folder'),
                           description=None,

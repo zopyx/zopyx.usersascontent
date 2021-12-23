@@ -40,9 +40,13 @@ class RedirectAfterLoginAdapter(object):
 
         user_obj = self.create_and_get_user_folder()
 
-        # update login dates
+        # first login?
         if not user_obj.first_login:
             user_obj.first_login = datetime.utcnow()
+            user_obj.last_login = datetime.utcnow()
+            return user_obj.absolute_url()
+
+        # update login dates
         user_obj.last_login = datetime.utcnow()
 
         redirect_always = api.portal.get_registry_record("redirect_always", IUsersAsContentSettings)

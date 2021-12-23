@@ -5,27 +5,28 @@
         <div metal:fill-slot="main">
             <h1 class="documentFirstHeading">${context/fullname}</h1>
 
-            <p tal:condition="context/email">
-                <span class="label" i18n:translate="">E-Mail</span>:
-                <a href="mailto:${context/email}">${context/email}</a>
-            </p>
-            <p tal:condition="context/organization">
-                <span class="label" i18n:translate="">Organization</span>:
-                <a href="mailto:${context/organization}">${context/organization}</a>
-            </p>
-            <p tal:condition="context/url">
-                <span class="label" i18n:translate="">URL</span>:
-                <a href="${context/url}">${context/url}</a>
-            </p>
-            <p tal:condition="context/text">
-                <span class="label" i18n:translate="">Personal information</span>:
-                <div tal:content="structure context/text/output"/>
-            </p>
-            <p tal:condition="python: context.picture">
-                <img class="" 
-                    tal:attributes="src string:${context/absolute_url}/@@images/picture/large" alt="Portrait: ${context/fullname}" />
-            </p>
-
+            <div id="my-metadata">
+                <p tal:condition="context/email">
+                    <span class="label" i18n:translate="">E-Mail</span>:
+                    <a href="mailto:${context/email}">${context/email}</a>
+                </p>
+                <p tal:condition="context/organization">
+                    <span class="label" i18n:translate="">Organization</span>:
+                    <a href="mailto:${context/organization}">${context/organization}</a>
+                </p>
+                <p tal:condition="context/url">
+                    <span class="label" i18n:translate="">URL</span>:
+                    <a href="${context/url}">${context/url}</a>
+                </p>
+                <p tal:condition="context/text">
+                    <span class="label" i18n:translate="">Personal information</span>:
+                    <div tal:content="structure context/text/output"/>
+                </p>
+                <p tal:condition="python: context.picture">
+                    <img class="" 
+                        tal:attributes="src string:${context/absolute_url}/@@images/picture/large" alt="Portrait: ${context/fullname}" />
+                </p>
+            </div>
 
             <ul id="my-content" tal:define="items view/my_content">
                 <h2 i18n:translate="">My content</h2>
@@ -33,29 +34,34 @@
                     <a href="${item/getURL}">${item/Title}</a>
                 </li>
             </ul>
-            <ul id="my-forward-references" tal:define="items view/my_forward_references">
-                <h2 i18n:translate="">Forward references</h2>
-                <li tal:repeat="relationship items">
-                    <h3>${relationship}</h3>
-                    <ul>
-                        <li tal:repeat="item items/?relationship">
-                            <a href="${item/absolute_url}">${item/Title}</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <ul id="my-backward-references" tal:define="items view/my_backward_references">
-                <h2 i18n:translate="">Backward references</h2>
-                <li tal:repeat="relationship items">
-                    <h3>${relationship}</h3>
-                    <ul>
-                        <li tal:repeat="item items/?relationship">
-                            <a href="${item/absolute_url}">${item/Title}</a>
-                        </li>
-                    </ul>
-                </li>
-                
-            </ul>
+
+            <tal:def define="items view/my_forward_references">
+                <ul id="my-forward-references" tal:condition="items">
+                    <h2 i18n:translate="">Forward references</h2>
+                    <li tal:repeat="relationship items">
+                        <h3>${relationship}</h3>
+                        <ul>
+                            <li tal:repeat="item items/?relationship">
+                                <a href="${item/absolute_url}">${item/Title}</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </tal:def>
+
+            <tal:def define="items view/my_backward_references">
+                <ul id="my-backward-references" tal:condition="items">
+                    <h2 i18n:translate="">Backward references</h2>
+                    <li tal:repeat="relationship items">
+                        <h3>${relationship}</h3>
+                        <ul>
+                            <li tal:repeat="item items/?relationship">
+                                <a href="${item/absolute_url}">${item/Title}</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </tal:def>
         </div>
     </body>
 
