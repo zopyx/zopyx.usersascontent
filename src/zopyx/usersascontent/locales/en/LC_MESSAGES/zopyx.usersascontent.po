@@ -1,0 +1,124 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: ../browser/view.pt:55
+msgid "Backward references"
+msgstr ""
+
+#: ../browser/view.pt:10
+msgid "E-Mail"
+msgstr ""
+
+#: ../content/plone_user.py:26
+msgid "Email address"
+msgstr ""
+
+#: ../content/plone_user.py:43
+msgid "First login"
+msgstr ""
+
+#: ../browser/view.pt:41
+msgid "Forward references"
+msgstr ""
+
+#: ../interfaces.py:23
+msgid "ID of user folder"
+msgstr ""
+
+#: ../content/plone_user.py:30
+msgid "Information about yourself"
+msgstr ""
+
+#: ../configure.zcml:34
+msgid "Installs the zopyx.usersascontent add-on."
+msgstr ""
+
+#: ../content/plone_user.py:50
+msgid "Last login"
+msgstr ""
+
+#: ../content/plone_user.py:32
+msgid "Link"
+msgstr ""
+
+#: ../profiles/default/actions.xml
+msgid "My Dashboard"
+msgstr ""
+
+#: ../browser/view.pt:32
+msgid "My content"
+msgstr ""
+
+#: ../browser/view.pt:14
+#: ../content/plone_user.py:28
+msgid "Organization"
+msgstr ""
+
+#: ../browser/view.pt:22
+msgid "Personal information"
+msgstr ""
+
+#: ../profiles/default/types/PloneUser.xml
+msgid "Plone user as content"
+msgstr ""
+
+#: ../profiles/default/actions.xml
+msgid "Plone users-as-content dashboard"
+msgstr ""
+
+#: ../profiles/default/types/PloneUser.xml
+msgid "PloneUser"
+msgstr ""
+
+#: ../interfaces.py:27
+msgid "Redirect to user object after registration (first login)"
+msgstr ""
+
+#: ../interfaces.py:34
+msgid "Redirect to user object always after login"
+msgstr ""
+
+#: ../browser/view.pt:18
+msgid "URL"
+msgstr ""
+
+#: ../configure.zcml:43
+msgid "Uninstalls the zopyx.usersascontent add-on."
+msgstr ""
+
+#: ../profiles/default/controlpanel.xml
+msgid "Users as Content"
+msgstr ""
+
+#: ../browser/controlpanel.py:20
+msgid "Users as Content settings"
+msgstr ""
+
+#: ../content/plone_user.py:24
+msgid "Your fullname"
+msgstr ""
+
+#: ../content/plone_user.py:35
+msgid "Your picture"
+msgstr ""
+
+#: ../configure.zcml:34
+msgid "zopyx.usersascontent"
+msgstr ""
+
+#: ../configure.zcml:43
+msgid "zopyx.usersascontent (uninstall)"
+msgstr ""
