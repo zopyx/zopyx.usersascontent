@@ -1,64 +1,25 @@
-.. This README is meant for consumption by humans and pypi. Pypi can render rst files so please do not use Sphinx features.
-   If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
-   This text does not appear on pypi or github. It is a comment.
+# zopyx.usersascontent
 
-.. image:: https://travis-ci.org/collective/zopyx.usersascontent.svg?branch=master
-    :target: https://travis-ci.org/collective/zopyx.usersascontent
+This add-on provides a new content-types `PloneUser` for representing a user in
+Plone through a dedicated content-type.  The motivation for this add-on is the
+need for maintaining user profiles a content in order to make them referencable
+from other content.
 
-.. image:: https://coveralls.io/repos/github/collective/zopyx.usersascontent/badge.svg?branch=master
-    :target: https://coveralls.io/github/collective/zopyx.usersascontent?branch=master
-    :alt: Coveralls
+The `PloneUser` provides the standard fields like fullname, email organization,
+a member picture etc. and a dedicated view.
 
-.. image:: https://img.shields.io/pypi/v/zopyx.usersascontent.svg
-    :target: https://pypi.python.org/pypi/zopyx.usersascontent/
-    :alt: Latest Version
+The add-on also contains some ideas borrowed from `collective.onlogin` with
+configurable redirections to a user's `PloneUser` object directly after the
+first login after registration or after each login.
 
-.. image:: https://img.shields.io/pypi/status/zopyx.usersascontent.svg
-    :target: https://pypi.python.org/pypi/zopyx.usersascontent
-    :alt: Egg Status
+`zopyx.usersascountent` is designed as a lightweight alternative to Membrane & Co.
 
-.. image:: https://img.shields.io/pypi/pyversions/zopyx.usersascontent.svg?style=plastic   :alt: Supported - Python Versions
+## Requirements:
 
-.. image:: https://img.shields.io/pypi/l/zopyx.usersascontent.svg
-    :target: https://pypi.python.org/pypi/zopyx.usersascontent/
-    :alt: License
+- Plone 6, Python 3
+- (untested with Plone 5.2)
 
-
-====================
-zopyx.usersascontent
-====================
-
-Tell me what your product does
-
-Features
---------
-
-- Can be bullet points
-
-
-Examples
---------
-
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
-
-
-Documentation
--------------
-
-Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
-
-
-Translations
-------------
-
-This product has been translated into
-
-- Klingon (thanks, K'Plai)
-
-
-Installation
-------------
+## Installation
 
 Install zopyx.usersascontent by adding it to your buildout::
 
@@ -73,22 +34,12 @@ Install zopyx.usersascontent by adding it to your buildout::
 and then running ``bin/buildout``
 
 
-Contribute
-----------
+# # Contribute
 
-- Issue Tracker: https://github.com/collective/zopyx.usersascontent/issues
-- Source Code: https://github.com/collective/zopyx.usersascontent
-- Documentation: https://docs.plone.org/foo/bar
+- Issue Tracker: https://github.com/zopyx/zopyx.usersascontent/issues
+- Source Code: https://github.com/zopyx/zopyx.usersascontent
 
 
-Support
--------
-
-If you are having issues, please let us know.
-We have a mailing list located at: project@example.com
-
-
-License
--------
+## License
 
 The project is licensed under the GPLv2.
