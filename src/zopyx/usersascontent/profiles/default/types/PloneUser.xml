@@ -44,8 +44,8 @@
     <element value="plone.ownership"/>
     <element value="plone.publication"/>
     <element value="plone.categorization"/>
-    <element value="plone.basic"/>
     <element value="plone.relateditems" />
+    <!--<element value="plone.basic"/> -->
     <!--<element value="plone.leadimage"/>-->
     <!--<element value="plone.relateditems"/>-->
     <!--<element value="plone.richtext"/>-->
