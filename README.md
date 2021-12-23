@@ -1,7 +1,7 @@
 # zopyx.usersascontent
 
 This add-on provides a new content-types `PloneUser` for representing a user in
-Plone through a dedicated content-type.  The motivation for this add-on is the
+Plone through a dedicated content-type.  The motivation for   this add-on is the
 need for maintaining user profiles a content in order to make them referencable
 from other content.
 
@@ -14,14 +14,16 @@ first login after registration or after each login.
 
 `zopyx.usersascountent` is designed as a lightweight alternative to Membrane & Co.
 
+The add-on provides a control panel `Users As Content`.
+
 ## Requirements:
 
-- Plone 6, Python 3
+- Plone 6, Python 3.8+
 - (untested with Plone 5.2)
 
 ## Installation
 
-Install zopyx.usersascontent by adding it to your buildout::
+Install zopyx.usersascontent by adding it to your buildout:
 
     [buildout]
 
@@ -34,7 +36,7 @@ Install zopyx.usersascontent by adding it to your buildout::
 and then running ``bin/buildout``
 
 
-# # Contribute
+## Contribute
 
 - Issue Tracker: https://github.com/zopyx/zopyx.usersascontent/issues
 - Source Code: https://github.com/zopyx/zopyx.usersascontent
