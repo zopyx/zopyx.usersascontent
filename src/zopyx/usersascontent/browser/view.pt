@@ -30,12 +30,12 @@
 
             <tal:def define="items view/my_content">
                 <h2 i18n:translate="">My content</h2>
-                <table class="table table-dark listing" tal:condition="items">
+                <table class="table table-light listing" tal:condition="items">
                     <thead>
                         <tr>
-                            <td i18n:translate="">Title</td>
-                            <td i18n:translate="">Path</td>
-                            <td i18n:translate="">Type</td>
+                            <th i18n:translate="">Title</th>
+                            <th i18n:translate="">Path</th>
+                            <th i18n:translate="">Type</th>
                         </tr>
                     </thead>
                     <tbody>
