@@ -25,7 +25,7 @@ class RedirectAfterLoginAdapter(object):
 
             if user_folder_id not in portal.objectIds():
                 uf = api.content.create(
-                    type="Folder", id=user_folder_id, title="Users", container=portal
+                    type="PloneUserFolder", id=user_folder_id, title="Users", container=portal
                 )
                 uf.setLayout("ploneuser-search")
                 api.content.transition(uf, "publish")

@@ -21,10 +21,7 @@
   <property name="global_allow">True</property>
   <property name="filter_content_types">True</property>
   <property name="allowed_content_types">
-  <!--
-    <element value="Document" />
-    <element value="File" />
-  -->
+    <element value="PloneUser" />
   </property>
   <!-- Schema, class and security -->
   <property name="add_permission">zopyx.usersascontent.AddPloneUserFolder</property>
@@ -46,7 +43,7 @@
     <element value="plone.publication"/>
     <element value="plone.categorization"/>
     <element value="plone.basic"/>
-    <element value="plone.app.referenceablebehavior.referenceable.IReferenceable" />
+    <element value="plone.relateditems" />
     <!--<element value="plone.leadimage"/>-->
     <!--<element value="plone.relateditems"/>-->
     <!--<element value="plone.richtext"/>-->
