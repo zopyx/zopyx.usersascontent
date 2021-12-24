@@ -17,7 +17,7 @@ from zopyx.usersascontent import _
 class IPloneUser(model.Schema):
     """Marker interface and Dexterity Python Schema for PloneUser"""
 
-    fullname = schema.TextLine(title=_(u"Your fullname"), required=False)
+    fullname = schema.TextLine(title=_(u"Your fullname"), required=True)
 
     email = schema.TextLine(title=_(u"Email address"), required=False)
 
