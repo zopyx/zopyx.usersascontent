@@ -1,8 +1,8 @@
-import html2text
+from .content.plone_user import IPloneUser
 from DateTime import DateTime
 from plone.indexer import indexer
 
-from .content.plone_user import IPloneUser
+import html2text
 
 
 @indexer(IPloneUser)

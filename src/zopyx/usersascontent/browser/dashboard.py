@@ -1,11 +1,8 @@
-from Products.Five.browser import BrowserView
-
-from plone import api
-
-from zope.interface.interfaces import ComponentLookupError
-
-from zopyx.usersascontent.interfaces import IUsersAsContentSettings
 from collective.relationhelpers import api as relapi
+from plone import api
+from Products.Five.browser import BrowserView
+from zope.interface.interfaces import ComponentLookupError
+from zopyx.usersascontent.interfaces import IUsersAsContentSettings
 
 
 class Dashboard(BrowserView):

@@ -1,5 +1,5 @@
-from plone import api
 from datetime import datetime
+from plone import api
 from Products.CMFPlone.interfaces import IRedirectAfterLogin
 from Products.CMFPlone.utils import safe_unicode
 from zope.interface import implementer

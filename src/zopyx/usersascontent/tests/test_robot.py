@@ -2,7 +2,7 @@
 from plone.app.testing import ROBOT_TEST_LEVEL
 from plone.testing import layered
 from zopyx.usersascontent.testing import (
-    ZOPYX_USERSASCONTENT_ACCEPTANCE_TESTING,  # noqa: E501,,
+    ZOPYX_USERSASCONTENT_ACCEPTANCE_TESTING  # noqa: E501,,,
 )
 
 import os

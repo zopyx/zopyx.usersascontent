@@ -3,7 +3,7 @@
 from plone import api
 from plone.app.testing import setRoles, TEST_USER_ID
 from zopyx.usersascontent.testing import (
-    ZOPYX_USERSASCONTENT_INTEGRATION_TESTING,  # noqa: E501,,
+    ZOPYX_USERSASCONTENT_INTEGRATION_TESTING  # noqa: E501,,,
 )
 
 import unittest

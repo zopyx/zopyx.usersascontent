@@ -6,7 +6,7 @@ from plone.dexterity.interfaces import IDexterityFTI
 from zope.component import createObject, queryUtility
 from zopyx.usersascontent.content.plone_user import IPloneUser  # NOQA E501
 from zopyx.usersascontent.testing import (
-    ZOPYX_USERSASCONTENT_INTEGRATION_TESTING,  # noqa,
+    ZOPYX_USERSASCONTENT_INTEGRATION_TESTING  # noqa,,
 )
 
 import unittest

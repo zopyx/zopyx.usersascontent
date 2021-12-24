@@ -7,6 +7,12 @@
   <!-- -*- extra stuff goes here -*- -->
 
     <permission
+        id="zopyx.usersascontent.AddPloneUserFolder"
+        title="zopyx.usersascontent: Add PloneUserFolder"
+    />
+
+
+    <permission
         id="zopyx.usersascontent.AddPloneUser"
         title="zopyx.usersascontent: Add PloneUser"
     />

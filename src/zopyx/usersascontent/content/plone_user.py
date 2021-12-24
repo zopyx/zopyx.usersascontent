@@ -1,20 +1,16 @@
 # -*- coding: utf-8 -*-
 from plone.app.textfield import RichText
+from plone.app.vocabularies.catalog import CatalogSource
 from plone.autoform import directives
+from plone.autoform.directives import read_permission, write_permission
 from plone.dexterity.content import Container, Item
 from plone.namedfile import field as namedfile
 from plone.supermodel import model
 from plone.supermodel.directives import fieldset
-
+from z3c.relationfield.schema import RelationChoice, RelationList
 # from z3c.form.browser.radio import RadioFieldWidget
 from zope import schema
 from zope.interface import implementer
-from plone.app.vocabularies.catalog import CatalogSource
-from z3c.relationfield.schema import RelationChoice
-from z3c.relationfield.schema import RelationList
-from plone.autoform.directives import read_permission
-from plone.autoform.directives import write_permission
-
 from zopyx.usersascontent import _
 
 

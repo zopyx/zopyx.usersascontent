@@ -5,13 +5,13 @@
 # (C) 2022,  Andreas Jung, www.zopyx.com, Tuebingen, Germany
 ################################################################
 
-import json
-
 from plone.app.registry.browser import controlpanel
 from plone.registry.interfaces import IRegistry
+from zope.component import getUtility
 from zopyx.usersascontent import _
 from zopyx.usersascontent.interfaces import IUsersAsContentSettings
-from zope.component import getUtility
+
+import json
 
 
 class UsersAsContentEditForm(controlpanel.RegistryEditForm):
