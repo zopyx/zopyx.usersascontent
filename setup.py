@@ -14,7 +14,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='zopyx.usersascontent',
-    version='1.0a1',
+    version='1.0a2',
     description="Plone users as content",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
