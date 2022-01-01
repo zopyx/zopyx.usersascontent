@@ -3,7 +3,7 @@
     metal:use-macro="here/main_template/macros/master" i18n:domain="zopyx.usersascontent">
     <body>
         <div metal:fill-slot="main">
-            <h1 class="documentFirstHeading">${context/fullname}</h1>
+            <h1 class="documentFirstHeading">${context/Title}</h1>
 
             <div id="my-metadata">
                 <div tal:condition="context/email">

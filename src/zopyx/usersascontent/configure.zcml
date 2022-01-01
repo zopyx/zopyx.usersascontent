@@ -17,6 +17,7 @@
     />
 
   <adapter factory=".indexers.SearchableText" name="SearchableText" />
+  <adapter factory=".indexers.SearchableUsername" name="searchable_username" />
 
   <genericsetup:registerProfile
       name="default"

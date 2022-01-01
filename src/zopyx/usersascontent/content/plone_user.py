@@ -17,8 +17,8 @@ from zopyx.usersascontent import _
 class IPloneUser(model.Schema):
     """Marker interface and Dexterity Python Schema for PloneUser"""
 
-    fullname = schema.TextLine(title=_(u"Your fullname"), required=True)
-
+    first_name = schema.TextLine(title=_(u"Your firstname"), required=True)
+    last_name = schema.TextLine(title=_(u"Your Lastname"), required=True)
     email = schema.TextLine(title=_(u"Email address"), required=False)
 
     organization = schema.TextLine(title=_(u"Organization"), required=False)
@@ -61,4 +61,8 @@ class PloneUser(Item):
 
     def Title(self):
         """ Take title from fullname """
-        return self.fullname
+        names = [self.first_name, self.last_name ]
+        names = [n for n in names if n]
+        if not names:
+            names = [self.getId()]
+        return " ".join(names)
