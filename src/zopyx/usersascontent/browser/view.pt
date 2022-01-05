@@ -44,7 +44,7 @@
                                 <a href="${item/getURL}">${item/Title}</a>
                             </td>
                             <td>${item/getPath}</td>
-                            <td i18n:translate="">${item/portal_type}</td>
+                            <td i18n:domain="plone" i18n:translate="">${item/portal_type}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -68,7 +68,7 @@
                                     <a href="${item/absolute_url}">${item/Title}</a>
                                 </td>
                                 <td>${python: item.absolute_url(1)}</td>
-                                <td i18n:translate="">${item/portal_type}</td>
+                                <td i18n:domain="plone" i18n:translate="">${item/portal_type}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -93,7 +93,7 @@
                                     <a href="${item/absolute_url}">${item/Title}</a>
                                 </td>
                                 <td>${python: item.absolute_url(1)}</td>
-                                <td i18n:translate="">${item/portal_type}</td>
+                                <td i18n:domain="plone" i18n:translate="">${item/portal_type}</td>
                             </tr>
                         </tbody>
                     </table>

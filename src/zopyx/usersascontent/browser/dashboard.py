@@ -34,11 +34,10 @@ class Dashboard(BrowserView):
             self.request.response.redirect(portal.absolute_url())
 
     def my_content(self):
-        catalog = api.portal.get_tool("portal_catalog")
-        return catalog(Creator=api.user.get_current().getId())
+        return self.context.content()
 
     def my_forward_references(self):
-        return relapi.relations(self.context, as_dict=True)
+        return self.context.forward_references()
 
     def my_backward_references(self):
-        return relapi.backrelations(self.context, as_dict=True)
+        return self.context.backward_references()

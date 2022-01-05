@@ -162,3 +162,13 @@ msgstr "Suchen"
 
 msgid "No persons found"
 msgstr "Keine Treffer"
+
+msgid "Title"
+msgstr "Titel"
+
+
+msgid "Path"
+msgstr "Ablagepfad"
+
+msgid "Type"
+msgstr "Inhaltstyp"

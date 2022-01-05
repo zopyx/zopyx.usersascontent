@@ -8,10 +8,12 @@ from plone.namedfile import field as namedfile
 from plone.supermodel import model
 from plone.supermodel.directives import fieldset
 from z3c.relationfield.schema import RelationChoice, RelationList
+from collective.relationhelpers import api as relapi
 # from z3c.form.browser.radio import RadioFieldWidget
 from zope import schema
 from zope.interface import implementer
 from zopyx.usersascontent import _
+from plone import api
 
 
 class IPloneUser(model.Schema):
@@ -66,3 +68,13 @@ class PloneUser(Item):
         if not names:
             names = [self.getId()]
         return " ".join(names)
+
+    def content(self):
+        catalog = api.portal.get_tool("portal_catalog")
+        return catalog(Creator=api.user.get_current().getId())
+
+    def forward_references(self):
+        return relapi.relations(self, as_dict=True)
+
+    def backward_references(self):
+        return relapi.backrelations(self, as_dict=True)
