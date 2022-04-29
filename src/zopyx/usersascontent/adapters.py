@@ -50,23 +50,20 @@ class RedirectAfterLoginAdapter(object):
             user_obj.first_login = datetime.utcnow()
             user_obj.last_login = datetime.utcnow()
 
-            redirect_after_registration = api.portal.get_registry_record(
+            if redirect_after_registration := api.portal.get_registry_record(
                 "redirect_after_registration", IUsersAsContentSettings
-            )
-            if redirect_after_registration:
+            ):
                 return user_obj.absolute_url()
 
         # update login dates
         user_obj.last_login = datetime.utcnow()
 
-        redirect_always = api.portal.get_registry_record(
+        if redirect_always := api.portal.get_registry_record(
             "redirect_always", IUsersAsContentSettings
-        )
-        if redirect_always:
+        ):
             return user_obj.absolute_url()
 
-        came_from = self.request.get("came_from")
-        if came_from:
+        if came_from := self.request.get("came_from"):
             return came_from
 
         return self.context.absolute_url()

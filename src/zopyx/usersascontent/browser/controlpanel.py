@@ -35,10 +35,7 @@ class UsersAsContentControlPanel(controlpanel.ControlPanelFormWrapper):
         """Returns setting as dict"""
         registry = getUtility(IRegistry)
         settings = registry.forInterface(IUsersAsContentSettings)
-        result = dict()
-        for name in settings.__schema__:
-            result[name] = getattr(settings, name)
-        return result
+        return {name: getattr(settings, name) for name in settings.__schema__}
 
     def settings_json(self):
         """Returns setting as JSON"""

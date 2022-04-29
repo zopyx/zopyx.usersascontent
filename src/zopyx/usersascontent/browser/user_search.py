@@ -14,5 +14,4 @@ class UserSearch(BrowserView):
         catalog = api.portal.get_tool("portal_catalog")
         query = self.request.form.get("query")
 
-        result = catalog(portal_type="PloneUser", SearchableText=query)
-        return result
+        return catalog(portal_type="PloneUser", SearchableText=query)
