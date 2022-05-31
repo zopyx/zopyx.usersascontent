@@ -71,7 +71,7 @@ class PloneUser(Item):
 
     def content(self):
         catalog = api.portal.get_tool("portal_catalog")
-        return catalog(Creator=api.user.get_current().getId())
+        return catalog(Creator=self.getId())
 
     def forward_references(self):
         return relapi.relations(self, as_dict=True)
