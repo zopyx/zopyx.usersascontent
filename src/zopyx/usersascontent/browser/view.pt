@@ -8,11 +8,11 @@
             <div id="my-metadata">
                 <div tal:condition="context/first_name">
                     <span class="label" i18n:translate="">First name</span>:
-                    <span tal:content="${context/first_name}"/>
+                    <span>${context/first_name}</span>
                 </div>
                 <div tal:condition="context/last_name">
                     <span class="label" i18n:translate="">Last name</span>:
-                    <span tal:content="${context/last_name}"/>
+                    <span>${context/last_name}</span>
                 </div>
             </div>
 
