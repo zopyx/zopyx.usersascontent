@@ -14,7 +14,6 @@ def SearchableText(obj):
         items = [
             obj.first_name,
             obj.last_name,
-            obj.organization,
             obj.getId(),
         ]
         if obj.text and obj.text.output:
