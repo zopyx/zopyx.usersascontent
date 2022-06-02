@@ -23,17 +23,6 @@ class IPloneUser(model.Schema):
     last_name = schema.TextLine(title=_(u"Your Lastname"), required=True)
     email = schema.TextLine(title=_(u"Email address"), required=False)
 
-    organization = schema.TextLine(title=_(u"Organization"), required=False)
-
-    text = RichText(title=_(u"Information about yourself"), required=False)
-
-    url = schema.URI(title=_(u"Link"), required=False)
-
-    picture = namedfile.NamedBlobImage(
-        title=_(u"Your picture"),
-        required=False,
-    )
-
     read_permission(first_login="cmf.ManagePortal")
     write_permission(first_login="cmf.ManagePortal")
     fieldset("User-specific dates", fields=["first_login", "last_login"])
@@ -48,12 +37,6 @@ class IPloneUser(model.Schema):
         title=_(u"Last login"),
         required=False,
     )
-
-#    evil_mastermind = RelationChoice(
-#        title="The Evil Mastermind",
-#        vocabulary="plone.app.vocabularies.Catalog",
-#        required=False,
-#    )
 
 
 @implementer(IPloneUser)

@@ -15,6 +15,7 @@ def SearchableText(obj):
             obj.first_name,
             obj.last_name,
             obj.organization,
+            obj.getId(),
         ]
         if obj.text and obj.text.output:
             items.append(h2t.handle(obj.text.output))
@@ -30,6 +31,7 @@ def SearchableUsername(obj):
         items = [
             obj.first_name,
             obj.last_name,
+            obj.getId(),
         ]
         items = [item for item in items if item]
         return " ".join(items)
